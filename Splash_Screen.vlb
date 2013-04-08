@@ -1,0 +1,12 @@
+﻿[AppBar]
+Coordinates=10,10,51,51
+
+[CloseButton]
+Coordinates=71,10,75,51
+
+[mainLogo]
+Coordinates=80,80,63,51
+
+[Label1]
+Coordinates=31,80,46,51
+

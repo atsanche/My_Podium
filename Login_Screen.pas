@@ -1,0 +1,116 @@
+unit Login_Screen;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, System.Actions, Vcl.ActnList, Vcl.Touch.GestureMgr,
+  Vcl.Imaging.jpeg;
+
+type
+  TloginForm = class(TForm)
+    AppBar: TPanel;
+    CloseButton: TImage;
+    ActionList1: TActionList;
+    Action1: TAction;
+    GestureManager1: TGestureManager;
+    uName: TEdit;
+    pWord: TEdit;
+    uNameLabel: TLabel;
+    pWordLabel: TLabel;
+    loginUser: TButton;
+    rememberMe: TCheckBox;
+    GroupBox1: TGroupBox;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Label3: TLabel;
+    Edit3: TEdit;
+    Button1: TButton;
+    Image1: TImage;
+    procedure CloseButtonClick(Sender: TObject);
+    procedure Action1Execute(Sender: TObject);
+    procedure FormResize(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormGesture(Sender: TObject; const EventInfo: TGestureEventInfo;
+      var Handled: Boolean);
+    procedure loginUserClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure AppBarResize;
+    procedure AppBarShow(mode: integer);
+  public
+    { Public declarations }
+  end;
+
+var
+  loginForm: TloginForm;
+
+implementation
+
+{$R *.dfm}
+uses
+  Home_Screen;
+const
+  AppBarHeight = 75;
+
+procedure TloginForm.AppBarResize;
+begin
+  AppBar.SetBounds(0, AppBar.Parent.Height - AppBarHeight,
+    AppBar.Parent.Width, AppBarHeight);
+end;
+
+procedure TloginForm.AppBarShow(mode: integer);
+begin
+  if mode = -1 then // Toggle
+    mode := integer(not AppBar.Visible );
+
+  if mode = 0 then
+    AppBar.Visible := False
+  else
+  begin
+    AppBar.Visible := True;
+    AppBar.BringToFront;
+  end;
+end;
+
+procedure TloginForm.Action1Execute(Sender: TObject);
+begin
+  AppBarShow(-1);
+end;
+
+procedure TloginForm.CloseButtonClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TloginForm.FormGesture(Sender: TObject;
+  const EventInfo: TGestureEventInfo; var Handled: Boolean);
+begin
+  AppBarShow(0);
+end;
+
+procedure TloginForm.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_ESCAPE then
+    AppBarShow(-1)
+  else
+    AppBarShow(0);
+end;
+
+procedure TloginForm.FormResize(Sender: TObject);
+begin
+  AppBarResize;
+end;
+
+procedure TloginForm.loginUserClick(Sender: TObject);
+begin
+  loginForm.Hide;
+  homeForm.Show;
+end;
+
+end.
