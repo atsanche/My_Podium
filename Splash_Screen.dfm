@@ -3,12 +3,12 @@ object splashForm: TsplashForm
   Top = 0
   BorderStyle = bsNone
   Caption = 'splashForm'
-  ClientHeight = 1190
-  ClientWidth = 1715
+  ClientHeight = 1080
+  ClientWidth = 1920
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -24
+  Font.Height = -19
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -21,13 +21,17 @@ object splashForm: TsplashForm
   OnGesture = FormGesture
   OnKeyDown = FormKeyDown
   OnResize = FormResize
-  PixelsPerInch = 120
-  TextHeight = 32
+  PixelsPerInch = 96
+  TextHeight = 25
   object mainLogo: TImage
-    Left = 512
-    Top = 384
-    Width = 297
-    Height = 313
+    Left = 120
+    Top = 120
+    Width = 833
+    Height = 913
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000001260000
       01240806000000820C9CD1000000097048597300000B1300000B1301009A9C18
@@ -1865,41 +1869,38 @@ object splashForm: TsplashForm
       0217048AB14CD1CDC51560C263E79D23A0E1A95CFB3F02ED131D29A11EA54058
       3E171A13198D698DAAD94BC270062A2104673434A1BD88DEF3FDFAE1E3D7C3E3
       370E3703C15F28375B68C930BE530000000049454E44AE426082}
+    Stretch = True
   end
   object Label1: TLabel
-    Left = 1247
-    Top = 976
-    Width = 263
-    Height = 70
+    Left = 910
+    Top = 803
+    Width = 457
+    Height = 120
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
     Caption = 'My Podium'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = 70
+    Font.Height = 120
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
   end
   object AppBar: TPanel
     Left = 0
-    Top = 1094
-    Width = 1715
-    Height = 96
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Top = 855
+    Width = 1340
+    Height = 75
     BevelOuter = bvNone
     TabOrder = 0
     Visible = False
     object CloseButton: TImage
-      Left = 1638
+      Left = 1280
       Top = 0
-      Width = 77
-      Height = 96
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Width = 60
+      Height = 75
       Align = alRight
       Center = True
       Picture.Data = {

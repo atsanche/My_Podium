@@ -35,20 +35,26 @@ type
     browseFile: TButton;
     themeCombo: TComboBox;
     content: TPanel;
-    Image1: TImage;
-    Image2: TImage;
+    newPresAccept: TImage;
+    newPresClose: TImage;
     templatePanel: TPanel;
-    Label1: TLabel;
+    appearanceMainLabel: TLabel;
     Label2: TLabel;
-    customCloseButton: TImage;
+    bgroundcolorLabel: TLabel;
+    fontLabel: TLabel;
+    fontsizeLabel: TLabel;
+    appearanceBrowse: TButton;
+    bgroundcolorComboBox: TComboBox;
+    fontComboBox: TComboBox;
+    fontsizeComboBox: TComboBox;
     customAcceptButton: TImage;
-    Label3: TLabel;
-    Label4: TLabel;
-    Label5: TLabel;
+    customCloseButton: TImage;
+    bookmarkPanel: TPanel;
+    bookmarkManagerMainLabel: TLabel;
+    bMarkAcceptButton: TImage;
+    ListBox1: TListBox;
     Button1: TButton;
-    ComboBox1: TComboBox;
-    ComboBox2: TComboBox;
-    ComboBox3: TComboBox;
+    Button2: TButton;
     procedure CloseButtonClick(Sender: TObject);
     procedure Action1Execute(Sender: TObject);
     procedure FormResize(Sender: TObject);
@@ -59,6 +65,13 @@ type
     procedure newPresentationClick(Sender: TObject);
     procedure closePanelClick(Sender: TObject);
     procedure custApprearanceClick(Sender: TObject);
+    procedure customAcceptButtonClick(Sender: TObject);
+    procedure customCloseButtonClick(Sender: TObject);
+    procedure manBookmarksClick(Sender: TObject);
+    procedure bMarkCloseButtonClick(Sender: TObject);
+    procedure loadPresentationClick(Sender: TObject);
+    procedure newPresAcceptClick(Sender: TObject);
+    procedure newPresCloseClick(Sender: TObject);
   private
     { Private declarations }
     procedure AppBarResize;
@@ -98,6 +111,8 @@ begin
   end;
 end;
 
+
+
 procedure ThomeForm.Action1Execute(Sender: TObject);
 begin
   AppBarShow(-1);
@@ -128,8 +143,19 @@ begin
   AppBarResize;
 end;
 
+
+
+
+
+procedure ThomeForm.bMarkCloseButtonClick(Sender: TObject);
+begin
+  mainPanel.Visible := true;
+  bookmarkPanel.Visible := false;
+end;
+
 procedure ThomeForm.closePanelClick(Sender: TObject);
 begin
+  //CLOSE NEW PRESENTAION PANEL AND OPENS MAIN PANEL
   newpresPanel.Visible := false;
   mainPanel.Visible := true;
 end;
@@ -140,12 +166,67 @@ begin
   templatePanel.Visible := true;
 end;
 
+procedure ThomeForm.customAcceptButtonClick(Sender: TObject);
+begin
+  templatePanel.Visible := false;
+  mainPanel.Visible := true;
+end;
+
+procedure ThomeForm.customCloseButtonClick(Sender: TObject);
+begin
+  templatePanel.Visible := false;
+  mainPanel.Visible := true;
+end;
+
+procedure ThomeForm.loadPresentationClick(Sender: TObject);
+begin
+  //OPEN A FILE DIALOG IN THE FOLDER WE ARE GOING TO LOCALLY SAVE EACH PERSONS PRESENTATIONS
+end;
+
+
+//STANDARD USER LOGOUT
 procedure ThomeForm.logOutClick(Sender: TObject);
 begin
   homeForm.Hide;
   loginForm.Show;
 end;
 
+//HIDE THE MAIN PANEL
+//SHOW THE BOOKMARK MANAGER PANEL
+procedure ThomeForm.manBookmarksClick(Sender: TObject);
+begin
+  mainPanel.Visible := false;
+  bookmarkPanel.Visible := true;
+end;
+
+
+
+
+// WIP_
+procedure ThomeForm.newPresAcceptClick(Sender: TObject);
+begin
+  newpresPanel.Visible := false;
+  mainPanel.Visible := true;
+end;
+
+
+
+
+  // CLOSE THE NEW PRESENTATION PANEL AND OPEN MAIN PANEL
+procedure ThomeForm.newPresCloseClick(Sender: TObject);
+begin
+  newpresPanel.Visible := false;
+  mainPanel.Visible := true;
+end;
+
+
+
+
+  // OPEN THE NEW PRESENTATION PANEL
+
+  // ENTER NEW PRESENTATION NAME - TEDIT
+  // SELECT THE THEME FOR THE PRESENTATION - TCOMBOBOX
+  // DEFAULT TO A CERTAIN LOCATION BUT ALLOW A DIFFERENT LOCATION SELECTION - TOPENDIALOG
 procedure ThomeForm.newPresentationClick(Sender: TObject);
 begin
   mainPanel.Visible := false;

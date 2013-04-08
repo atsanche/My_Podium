@@ -3,12 +3,12 @@ object loginForm: TloginForm
   Top = 0
   BorderStyle = bsNone
   Caption = 'loginForm'
-  ClientHeight = 1080
-  ClientWidth = 1980
+  ClientHeight = 1084
+  ClientWidth = 1920
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -24
+  Font.Height = -19
   Font.Name = 'Segoe UI'
   Font.Style = []
   KeyPreview = True
@@ -19,13 +19,17 @@ object loginForm: TloginForm
   OnGesture = FormGesture
   OnKeyDown = FormKeyDown
   OnResize = FormResize
-  PixelsPerInch = 120
-  TextHeight = 32
+  PixelsPerInch = 96
+  TextHeight = 25
   object Image1: TImage
-    Left = 8
-    Top = 8
-    Width = 298
-    Height = 305
+    Left = 6
+    Top = 6
+    Width = 233
+    Height = 239
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000001260000
       01240806000000820C9CD1000000097048597300000B1300000B1301009A9C18
@@ -1863,28 +1867,21 @@ object loginForm: TloginForm
       0217048AB14CD1CDC51560C263E79D23A0E1A95CFB3F02ED131D29A11EA54058
       3E171A13198D698DAAD94BC270062A2104673434A1BD88DEF3FDFAE1E3D7C3E3
       370E3703C15F28375B68C930BE530000000049454E44AE426082}
+    Stretch = True
   end
   object AppBar: TPanel
-    Left = 0
-    Top = 1094
-    Width = 1715
-    Height = 96
-    Margins.Left = 4
-    Margins.Top = 4
-    Margins.Right = 4
-    Margins.Bottom = 4
+    Left = 580
+    Top = 1009
+    Width = 1340
+    Height = 75
     BevelOuter = bvNone
     TabOrder = 0
     Visible = False
     object CloseButton: TImage
-      Left = 1638
+      Left = 1280
       Top = 0
-      Width = 77
-      Height = 96
-      Margins.Left = 4
-      Margins.Top = 4
-      Margins.Right = 4
-      Margins.Bottom = 4
+      Width = 60
+      Height = 75
       Align = alRight
       Center = True
       Picture.Data = {
@@ -2007,148 +2004,208 @@ object loginForm: TloginForm
     end
   end
   object GroupBox1: TGroupBox
-    Left = 544
-    Top = 248
-    Width = 729
-    Height = 257
+    Left = 425
+    Top = 194
+    Width = 570
+    Height = 201
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
     Caption = 'Existing User'
     TabOrder = 1
     object pWordLabel: TLabel
-      Left = 154
-      Top = 113
-      Width = 136
-      Height = 45
+      Left = 120
+      Top = 88
+      Width = 112
+      Height = 37
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Password'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -33
+      Font.Height = -27
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object uNameLabel: TLabel
-      Left = 143
-      Top = 62
-      Width = 146
-      Height = 45
+      Left = 112
+      Top = 48
+      Width = 119
+      Height = 37
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Username'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -33
+      Font.Height = -27
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object loginUser: TButton
-      Left = 536
-      Top = 175
-      Width = 113
-      Height = 40
+      Left = 419
+      Top = 137
+      Width = 88
+      Height = 31
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Login'
       TabOrder = 0
       OnClick = loginUserClick
     end
     object pWord: TEdit
-      Left = 336
-      Top = 113
-      Width = 313
-      Height = 40
+      Left = 263
+      Top = 88
+      Width = 244
+      Height = 33
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       TabOrder = 1
     end
     object rememberMe: TCheckBox
-      Left = 335
-      Top = 183
-      Width = 195
-      Height = 25
+      Left = 262
+      Top = 143
+      Width = 152
+      Height = 20
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Remember Me'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = 20
+      Font.Height = 16
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 2
     end
     object uName: TEdit
-      Left = 336
-      Top = 67
-      Width = 313
-      Height = 40
+      Left = 263
+      Top = 52
+      Width = 244
+      Height = 33
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       TabOrder = 3
     end
   end
   object GroupBox2: TGroupBox
-    Left = 544
-    Top = 568
-    Width = 729
-    Height = 289
+    Left = 425
+    Top = 444
+    Width = 570
+    Height = 226
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
     Caption = 'New User'
     TabOrder = 2
     object Label1: TLabel
-      Left = 143
-      Top = 60
-      Width = 146
-      Height = 45
+      Left = 112
+      Top = 47
+      Width = 119
+      Height = 37
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Username'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -33
+      Font.Height = -27
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label2: TLabel
-      Left = 154
-      Top = 111
-      Width = 136
-      Height = 45
+      Left = 120
+      Top = 87
+      Width = 112
+      Height = 37
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Password'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -33
+      Font.Height = -27
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 43
-      Top = 159
-      Width = 246
-      Height = 45
+      Left = 34
+      Top = 124
+      Width = 202
+      Height = 37
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Repeat Password'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -33
+      Font.Height = -27
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
     end
     object Edit1: TEdit
-      Left = 337
-      Top = 115
-      Width = 313
-      Height = 40
+      Left = 263
+      Top = 90
+      Width = 245
+      Height = 33
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       TabOrder = 0
     end
     object Edit2: TEdit
-      Left = 336
-      Top = 67
-      Width = 313
-      Height = 40
+      Left = 263
+      Top = 52
+      Width = 244
+      Height = 33
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       TabOrder = 1
     end
     object Edit3: TEdit
-      Left = 336
-      Top = 162
-      Width = 313
-      Height = 40
+      Left = 263
+      Top = 127
+      Width = 244
+      Height = 33
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       TabOrder = 2
     end
     object Button1: TButton
-      Left = 536
-      Top = 223
-      Width = 113
-      Height = 40
+      Left = 419
+      Top = 174
+      Width = 88
+      Height = 31
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
       Caption = 'Register'
       TabOrder = 3
     end
